@@ -43,4 +43,4 @@ func animate():
 	emit_signal("enimate", motion)
 	
 func end_game():
-	get_tree().quit()
+	get_tree().change_scene("res://levels/GameOver.tscn")
