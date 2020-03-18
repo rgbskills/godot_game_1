@@ -59,17 +59,18 @@ margin_right = 724.0
 margin_bottom = 255.0
 alignment = 1
 
-[node name="TextureButton" type="TextureButton" parent="CenterContainer/VBoxContainer/HBoxContainer"]
-margin_left = 154.0
-margin_right = 206.0
-margin_bottom = 87.0
-texture_normal = ExtResource( 3 )
-
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer/HBoxContainer"]
-margin_left = 210.0
-margin_right = 569.0
+margin_left = 154.0
+margin_right = 513.0
 margin_bottom = 87.0
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Try again!"
+
+[node name="TextureButton" type="TextureButton" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+margin_left = 517.0
+margin_right = 569.0
+margin_bottom = 87.0
+grow_horizontal = 2
+texture_normal = ExtResource( 3 )
 [connection signal="pressed" from="CenterContainer/VBoxContainer/HBoxContainer/TextureButton" to="." method="_on_TextureButton_pressed"]
