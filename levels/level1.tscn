@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://levels/Tileset.tres" type="TileSet" id=2]
 [ext_resource path="res://hazards/SpikeTop.tscn" type="PackedScene" id=3]
 [ext_resource path="res://SFX/Summer_Park.ogg" type="AudioStream" id=4]
+[ext_resource path="res://items/JumpPad.tscn" type="PackedScene" id=5]
 
 [node name="Node2D" type="Node2D"]
 
@@ -39,6 +40,23 @@ position = Vector2( 402.439, 2121.71 )
 
 [node name="SpikeTop7" parent="Hazards" instance=ExtResource( 3 )]
 position = Vector2( 805.942, 2817.47 )
+
+[node name="JumpPads" type="Node" parent="."]
+
+[node name="JumpPad" parent="JumpPads" instance=ExtResource( 5 )]
+position = Vector2( 2163.03, 1700.22 )
+
+[node name="JumpPad2" parent="JumpPads" instance=ExtResource( 5 )]
+position = Vector2( 3177.38, 1123.7 )
+
+[node name="JumpPad3" parent="JumpPads" instance=ExtResource( 5 )]
+position = Vector2( 188.716, 2015.68 )
+
+[node name="JumpPad4" parent="JumpPads" instance=ExtResource( 5 )]
+position = Vector2( 2418.65, 1191.69 )
+
+[node name="JumpPad5" parent="JumpPads" instance=ExtResource( 5 )]
+position = Vector2( 2649.81, 2720.01 )
 
 [node name="Bgm" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )

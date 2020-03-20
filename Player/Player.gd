@@ -7,6 +7,7 @@ const GRAVATY = 270
 const UP = Vector2(0, -1)
 const JUMP_SPEED = 4200
 const WORLD_LIMIT = 4000
+const BOOST_MULTIPLIER = 1.5
 
 var lives = 3
 
@@ -57,3 +58,9 @@ func hurt():
 	$HurtSFX.play()
 	if lives < 0:
 		end_game()
+
+func boost():
+	position.y -= 1
+	yield(get_tree(), "idle_frame") 
+	$JumpSFX.play()
+	motion.y -= JUMP_SPEED * BOOST_MULTIPLIER
