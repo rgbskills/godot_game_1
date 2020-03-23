@@ -60,7 +60,7 @@ func hurt():
 		end_game()
 
 func boost():
+	$JumpSFX.play()
 	position.y -= 1
 	yield(get_tree(), "idle_frame") 
-	$JumpSFX.play()
 	motion.y -= JUMP_SPEED * BOOST_MULTIPLIER

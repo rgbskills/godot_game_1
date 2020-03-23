@@ -8,9 +8,9 @@
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
-"loop": true,
+"loop": false,
 "name": "boost",
-"speed": 2.5
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 1 ), ExtResource( 2 ) ],
 "loop": true,
@@ -19,11 +19,11 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 73.4439, 36.5187 )
+extents = Vector2( 74.6123, 38.3308 )
 
 [sub_resource type="Animation" id=3]
 resource_name = "boost"
-length = 2.0
+length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimatedSprite:animation")
 tracks/0/interp = 1
@@ -31,10 +31,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1.5, 2 ),
+"times": PoolRealArray( 0, 0.3, 0.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ "boost", "default", "boost" ]
+"values": [ "boost", "boost", "default" ]
 }
 
 [node name="JumpPad" type="Area2D"]
@@ -43,7 +43,8 @@ script = ExtResource( 4 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
-animation = "boost"
+frame = 1
+playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 2 )
